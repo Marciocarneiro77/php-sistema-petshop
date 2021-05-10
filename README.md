@@ -6,6 +6,6 @@ TECNOLOGIAS USADAS:
 * MYSQL
 * HTML
 * CSS
-
+* JS
 
 
