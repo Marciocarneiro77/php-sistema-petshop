@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    padding: 1rem;
+}
+
+.pagina{
+    background:rgb(200, 222, 243);
+}
+
+
+
+h1{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+input[type="date"]:hover{
+    background-color: rgb(220, 245, 250);
+    color: rgb(61, 56, 56);
+
+}
+input[type="date"]{
+    border-radius:10px ;
+
+}
+input[type="time"]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(206, 245, 247);
+
+}
+input[type="time"]{
+    border-radius:10px ;
+}
+select[name="sexo"]:hover{
+background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+   
+}
+select[name="sexo"]{
+    border-radius:10px ;
+
+}
+
+
+input[type="contato"]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+}
+
+input[type="contato"]{
+    border-radius:10px ;
+
+}
+
+
+input[type="telefone"]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+}
+input[type="telefone"]{
+    border-radius:10px ;
+
+}
+
+input[type="email"]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+}
+
+input[type="email"]{
+    border-radius:10px ;
+
+}
+
+input[type="text"]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+   
+}
+input[type=text]{
+    border-radius: 10px;  
+}
+input[type=number]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+   
+}
+
+input[type="number"]{
+    border-radius: 10px;  
+    width: 40px;
+
+    
+}
+
+
+
+button[type=submit]:hover{
+    background-color: rgb(220,245,250);
+    color: rgb(61, 56, 56);
+    
+}
+
+button[type=submit]{
+    display:block;
+    background-color:#ccc;
+    height:35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align:center;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
