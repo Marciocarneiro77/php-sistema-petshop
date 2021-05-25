@@ -30,9 +30,7 @@ CREATE TABLE tb_cadastrocaes(
     observacoes TEXT
 );
 
-<<<<<<< HEAD
-n
-=======
+
 
 
 
@@ -42,4 +40,4 @@ n
 
 
 
->>>>>>> c0aca7cb05b0044927cdde7bdc9ae207cbf91826
+
