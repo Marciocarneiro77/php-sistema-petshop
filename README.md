@@ -20,7 +20,7 @@ CREATE TABLE tb_cadastrocaes(
     raca VARCHAR(50),
     idade_anos INT(11),
     idade_meses INT(11),
-    sexo CHAR(50),
+    sexo VARCHAR(50),
     nome_dono VARCHAR (50),
     hora_cadastro TIME,
     data_cadastro DATE,
@@ -30,3 +30,4 @@ CREATE TABLE tb_cadastrocaes(
     observacoes TEXT
 );
 
+n
