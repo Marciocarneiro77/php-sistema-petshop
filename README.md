@@ -29,6 +29,10 @@ CREATE TABLE tb_cadastrocaes(
     cliente VARCHAR(3),
     observacoes TEXT
 );
+
+
+
+
 ![image](https://user-images.githubusercontent.com/73621857/119424867-ad39b780-bcdc-11eb-9d6a-7744f4e13a7a.png)
 
 
