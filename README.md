@@ -2,7 +2,8 @@
 Sistema para cadastro de cães de um petshop
 
 TECNOLOGIAS USADAS:
-* PHP
+* APACHE(XAMPP)
+* PHP -(MARIA DB)
 * MYSQL
 * HTML
 * CSS
