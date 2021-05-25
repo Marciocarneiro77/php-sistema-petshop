@@ -30,4 +30,16 @@ CREATE TABLE tb_cadastrocaes(
     observacoes TEXT
 );
 
+<<<<<<< HEAD
 n
+=======
+
+
+
+![image](https://user-images.githubusercontent.com/73621857/119424867-ad39b780-bcdc-11eb-9d6a-7744f4e13a7a.png)
+
+
+
+
+
+>>>>>>> c0aca7cb05b0044927cdde7bdc9ae207cbf91826
