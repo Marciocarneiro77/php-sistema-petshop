@@ -12,28 +12,28 @@
    <div class="pagina">
 
       <div class="container text-center">
-        <img src="./img/cao4.png" alt="Usuário">
+        <img src="./img/cao4.png" alt="Cadastro">
         <h1>CADASTRO DE CÃES</h1>
         <form action="cadastro.php" method="GET">
             <div class="row">
                 <div>
-                    <label for="usuario">Nome do cão</label><br>
-                    <input type="text" name="usuario" id="usuario" maxlenght="50" required>
+                    <label for="nome">Nome do cão</label><br>
+                    <input type="text" name="nome" id="nome" required>
                 </div>
                 <div>
                     <label for="raca">Raça</label><br>
                     <input type="text" name="raca" id="raca">
                 </div>
                 <div>
-                 <label for="idade">Idade</label><br>
+                 <label for="idade">Idade:</label><br>
                     
                  <div class="input-group"></div>
                  <div><label>Anos</label> <label>Meses</label></div>
 
-                      <div><input type="number" name="number">
+                      <div><input type="number" id="idade_anos" name="idade_anos">
 
                      
-                    <input type="number" name="number"></div>
+                    <input type="number" id="idade_meses" name="idade_meses"></div>
 
 
                 </div>
@@ -50,20 +50,20 @@
                  </select>
                  </div>
                  
-                 <div><form name="cadastro" method="GET" action="script.php"><br>
+                 <div><form name="cadastro" method="GET" action="cadastro.php"><br>
        <label>Data de Cadastro:</label></form><br>
-       <input type="date" id="data" name="dataCadastro">
+       <input type="date" id="data_cadastro" name="data_cadastro">
          <br><br>
          
        <label>Hora do Cadastro:</label><br>
-       <input type="time" id="hora" name="horaCadastro">
+       <input type="time" id="hora_cadastro" name="hora_cadastro">
        </div>
        
        <div><br>
                 <div>
                     <label>Contato do dono:</label><br>
                     <label>Nome:</label><br>
-                    <input type="contato" name="contato" id="contato"><br>
+                    <input type="text" name="nome_dono" id="nome_dono"><br>
                     
                     <label>Telefone:</label><br>
                     <input type="telefone" name="telefone" id="telefone"><br>
@@ -73,17 +73,20 @@
                 
                 </div>
              <div>
-                    <input type="checkbox" name="administrador" id="administrador" value="sim">
-                    <label for="administrador">Já é Cliente</label>
+                   <label>Já é Cliente:</label>
+                   
+                   <input  name="cliente" type="checkbox" id="cliente"  value="sim">
+                    
                 </div><br>
 
                 <fieldset>
-            <legend>Observações:</legend>
-            <textarea name="minicurriculo" id="minicurriculo"></textarea>
-        </fieldset>
+                     <legend>Observações:</legend>
+                     <textarea name="minicurriculo" id="minicurriculo"></textarea>
+                </fieldset>
             </div>
-
-            <button type="submit">Cadastrar</button>
+<div><br>
+            <button type="submit" id="btn" class="mt-3 d-block btn btn-danger">Cadastrar</button>
+            </div>
         </form>
     </div><br>
     <footer>
@@ -95,46 +98,68 @@
                 <tr>
                     <th>NOME DO CÃO</th>
                     <th>RAÇA</th>
-                    <th>IDADE</th>
+                    <th>ANOS</th>
+                    <th>MESES</th>
+                    
                     <th>SEXO</th>
                     <th>DONO</th>
                     <th>TELEFONE</th>
+                    <th>E-MAIL</th>
+                    <th>DATA CADASTRO</th>
+                    <th>HORA CADASTRO<th>
+                   <th>JÁ É CLIENTE</th>
 
                 </tr>
             </thead>
             <tbody>
             <tr>
-                  <?php include"conexao.php";?>
+         
+                <?php include "conexao.php"?>;
                   <?php 
                     $sqlBuscar = "SELECT * FROM tb_cadastrocaes"; 
                     $resultado = mysqli_query($conexao , $sqlBuscar);
-
-                    $listaCadastros = [];
+                   
+                    $sistemaCadastros = [];
 
                    while($cadastro = mysqli_fetch_assoc($resultado)) {
-                       $listaCadastros[] = $cadastro;
-                   } 
-
-                   foreach($listaCadastros as $cadastro): ?>
+                       $sistemaCadastros[] = $cadastro;
+                       
+                   }?>
+<?php
+                   foreach($sistemaCadastros as $cadastro): ?>
+                   
                     <tr>
-                        <td><?php echo $cadastro['nomedocao']; ?></td>
+                        <td><?php echo $cadastro['nome']; ?></td>
                         
                        
                         <td><?php echo $cadastro['raca']; ?></td>
                     
                     
-                        <td><?php echo $cadastro['idade']; ?></td>
+                        <td><?php echo $cadastro['idade_anos']; ?></td>
                     
+                        <td><?php echo $cadastro['idade_meses']; ?></td>
                     
                         <td><?php echo $cadastro['sexo']; ?></td>
-                    
-                    
-                        <td><?php echo $cadastro['dono']; ?></td>
+                        
+                        <td><?php echo $cadastro['nome_dono']; ?></td>
 
                         <td><?php echo $cadastro['telefone']; ?></td>
+
+                        <td><?php echo $cadastro['email']; ?></td>
+
+                        <td><?php echo $cadastro['data_cadastro']; ?></td>
+
+                        <td><?php echo $cadastro['hora_cadastro']; ?></td>
+                        <td><?php echo $cadastro['cliente']; ?></td>
+                        
                     </tr>
+                    
+                    
                 <?php endforeach; ?>
+
                 </tr>
+                
+                
             </tbody>
         </table> 
     </div>

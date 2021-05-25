@@ -7,6 +7,6 @@
     <title>Cadastro de cães</title>
 </head>
 <body>
-<a href="template.php">Cadastro de cães</a>
+
 </body>
 </html>
